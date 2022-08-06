@@ -2,12 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>GettingStarted</title>
+  <title>Web Components- getting started</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+  <br />
+  <h1>Try to use as web component</h1>
+  <mat-card>
+    <mat-card>
+      <mat-card-actions align="start">
+        <mat-button mat-raised-button>
+          <mat-icon>thumb_up_alt</mat-icon>
+          LIKE
+        </mat-button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card>
+      <mat-card-title>Actions Buttons</mat-card-title>
+      <mat-card-subtitle>Start</mat-card-subtitle>
+      <mat-card-actions>
+        <mat-button mat-raised-button>
+          <mat-icon matSuffix>thumb_up_alt</mat-icon> LIKE
+        </mat-button>
+        <mat-button mat-raised-button>
+          <mat-icon>share</mat-icon>SHARE
+        </mat-button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card>
+      <mat-card-title>Actions Buttons</mat-card-title>
+      <mat-card-subtitle>End</mat-card-subtitle>
+      <mat-card-actions align="end">
+        <mat-button mat-raised-button>
+          <mat-icon>thumb_up_alt</mat-icon>LIKE
+        </mat-button>
+        <mat-button mat-raised-button>
+          <mat-icon>share</mat-icon>SHARE
+        </mat-button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card>
 </body>
 </html>

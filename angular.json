@@ -30,6 +30,7 @@
               "projects/getting-started/src/assets"
             ],
             "styles": [
+              "projects/getting-started/src/custom-theme.scss",
               "projects/getting-started/src/styles.css"
             ],
             "scripts": []
