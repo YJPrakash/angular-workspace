@@ -8,44 +8,202 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="mat-typography">
-  <app-root></app-root>
-  <br />
-  <h1>Try to use as web component</h1>
+  <!-- <app-root></app-root> -->
+  
+</body>
+<script>
+  window.onload = function () {
+    let myTemplate = document.querySelector("template#myTemplate");
+    document.body.append(myTemplate.content);
+
+    // document.body.querySelector("app-root").append(myTemplate.content);
+    // let appRoot = document.createElement('app-root');
+    // myTemplate = document.querySelector("template#myTemplate");
+    // appRoot.append(myTemplate.content);
+    // document.body.append(appRoot);
+    let matCard = document.createElement('mat-card');
+    let matIcon = document.createElement('mat-icon');
+    // matIcon.setAttribute('color', 'primary');
+    matIcon.textContent = "home";
+    let button = document.createElement('mat-button');
+    button.setAttribute("mat-icon-button", "");
+    // button.setAttribute("textContent", "Home");
+    button.append(matIcon);
+    matCard.append(button);
+    document.body.append(matCard);
+  }
+</script>
+<template id="myTemplate">
   <mat-card>
+    <section>
+      <div class="example-label">Basic</div>
+      <div class="example-button-row">
+        <mat-button mat-button>Basic</mat-button>
+        <mat-button mat-button color="primary">Primary</mat-button>
+        <mat-button mat-button color="accent">Accent</mat-button>
+        <mat-button mat-button color="warn">Warn</mat-button>
+        <mat-button mat-button disabled>Disabled</mat-button>
+        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">Raised</div>
+      <div class="example-button-row">
+        <mat-button mat-raised-button>Basic</mat-button>
+        <mat-button mat-raised-button color="primary">Primary</mat-button>
+        <mat-button mat-raised-button color="accent">Accent</mat-button>
+        <mat-button mat-raised-button color="warn">Warn</mat-button>
+        <mat-button mat-raised-button disabled>Disabled</mat-button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">Stroked</div>
+      <div class="example-button-row">
+        <mat-button mat-stroked-button>Basic</mat-button>
+        <mat-button mat-stroked-button color="primary">Primary</mat-button>
+        <mat-button mat-stroked-button color="accent">Accent</mat-button>
+        <mat-button mat-stroked-button color="warn">Warn</mat-button>
+        <mat-button mat-stroked-button disabled>Disabled</mat-button>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">Flat</div>
+      <div class="example-button-row">
+        <mat-button mat-flat-button>Basic</mat-button>
+        <mat-button mat-flat-button color="primary">Primary</mat-button>
+        <mat-button mat-flat-button color="accent">Accent</mat-button>
+        <mat-button mat-flat-button color="warn">Warn</mat-button>
+        <mat-button mat-flat-button disabled>Disabled</mat-button>
+        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">Icon</div>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <mat-button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>more_vert</mat-icon>
+          </mat-button>
+          <mat-button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </mat-button>
+          <mat-button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </mat-button>
+          <mat-button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </mat-button>
+          <mat-button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+            <mat-icon>open_in_new</mat-icon>
+          </mat-button>
+        </div>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">FAB</div>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <mat-button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+              <mat-icon>bookmark</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-fab color="warn" aria-label="Example icon button with a home icon">
+              <mat-icon>home</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-fab disabled aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </mat-button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-label">Mini FAB</div>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <mat-button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+              <mat-icon>menu</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+              <mat-icon>plus_one</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+              <mat-icon>filter_list</mat-icon>
+            </mat-button>
+          </div>
+          <div class="example-button-container">
+            <mat-button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+              <mat-icon>home</mat-icon>
+            </mat-button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
     <mat-card>
-      <mat-card-actions align="start">
-        <mat-button mat-raised-button>
-          <mat-icon>thumb_up_alt</mat-icon>
-          LIKE
-        </mat-button>
-      </mat-card-actions>
+      <mat-button mat-raised-button>
+        <mat-icon>thumb_up_alt</mat-icon>LIKE
+      </mat-button>
+      <mat-button mat-raised-button>
+        <mat-icon>share</mat-icon>SHARE
+      </mat-button>
+      <app-mat-card-actions align="end">
+      </app-mat-card-actions>
     </mat-card>
     <br>
     <mat-card>
-      <mat-card-title>Actions Buttons</mat-card-title>
-      <mat-card-subtitle>Start</mat-card-subtitle>
-      <mat-card-actions>
+      <app-mat-card-title>Actions Buttons</app-mat-card-title>
+      <app-mat-card-subtitle>Start</app-mat-card-subtitle>
+      <app-mat-card-actions>
         <mat-button mat-raised-button>
           <mat-icon matSuffix>thumb_up_alt</mat-icon> LIKE
         </mat-button>
         <mat-button mat-raised-button>
           <mat-icon>share</mat-icon>SHARE
         </mat-button>
-      </mat-card-actions>
+      </app-mat-card-actions>
     </mat-card>
     <br>
     <mat-card>
-      <mat-card-title>Actions Buttons</mat-card-title>
-      <mat-card-subtitle>End</mat-card-subtitle>
-      <mat-card-actions align="end">
+      <app-mat-card-title>Actions Buttons</app-mat-card-title>
+      <app-mat-card-subtitle>End</app-mat-card-subtitle>
+      <app-mat-card-actions align="end">
         <mat-button mat-raised-button>
           <mat-icon>thumb_up_alt</mat-icon>LIKE
         </mat-button>
         <mat-button mat-raised-button>
           <mat-icon>share</mat-icon>SHARE
         </mat-button>
-      </mat-card-actions>
+      </app-mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card>
+      <mat-button>
+        <mat-icon>home</mat-icon>
+      </mat-button>
     </mat-card>
   </mat-card>
-</body>
+</template>
 </html>
